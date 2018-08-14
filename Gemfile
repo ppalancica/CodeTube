@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'materialize-sass'
 
+gem 'devise', '~> 4.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
