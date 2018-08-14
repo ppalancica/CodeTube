@@ -42,6 +42,8 @@ gem 'activeadmin', github: 'activeadmin'
 
 gem 'active_skin'
 
+gem 'paperclip', '~> 6.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
