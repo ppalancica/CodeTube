@@ -34,6 +34,8 @@ gem 'materialize-sass'
 
 gem 'devise', '~> 4.2'
 
+gem 'toastr-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
