@@ -3590,3 +3590,636 @@ Processing by PagesController#about as HTML
 Completed 200 OK in 84ms (Views: 81.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:35:37 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (195.6ms)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/idevwizard/Documents/CodeTube/app/assets/config
+  /Users/idevwizard/Documents/CodeTube/app/assets/images
+  /Users/idevwizard/Documents/CodeTube/app/assets/javascripts
+  /Users/idevwizard/Documents/CodeTube/app/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /Library/Ruby/Gems/2.3.0/gems/actionview-5.1.6/lib/assets/compiled
+  /Library/Ruby/Gems/2.3.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/idevwizard/Documents/CodeTube/node_modules
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/images):
+    11:         <div class="card-panel grey lighten-5 z-depth-1">
+    12:           <div class="row valign-wrapper">
+    13:             <div class="col m3">
+    14:               <%= image_tag "avatar.jpg", class: "circle responsive-img" %>
+    15:             </div>
+    16:             <div class="col m9">
+    17:               <span class="black-text">
+  
+app/assets/javascripts/application.js:18
+app/views/pages/about.html.erb:14:in `_app_views_pages_about_html_erb___3829535579967334669_70188121047220'
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:35:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /Users/idevwizard/Documents/CodeTube/app/assets/config
+  /Users/idevwizard/Documents/CodeTube/app/assets/images
+  /Users/idevwizard/Documents/CodeTube/app/assets/javascripts
+  /Users/idevwizard/Documents/CodeTube/app/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/toastr-rails-1.0.3/vendor/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/toastr-rails-1.0.3/vendor/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/actioncable-5.1.6/lib/assets/compiled
+  /Library/Ruby/Gems/2.3.0/gems/actionview-5.1.6/lib/assets/compiled
+  /Library/Ruby/Gems/2.3.0/gems/turbolinks-source-5.1.0/lib/assets/javascripts
+  /Users/idevwizard/Documents/CodeTube/node_modules
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/stylesheets
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/javascripts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/fonts
+  /Library/Ruby/Gems/2.3.0/gems/materialize-sass-0.100.2/app/assets/images):
+    11:         <div class="card-panel grey lighten-5 z-depth-1">
+    12:           <div class="row valign-wrapper">
+    13:             <div class="col m3">
+    14:               <%= image_tag "avatar.jpg", class: "circle responsive-img" %>
+    15:             </div>
+    16:             <div class="col m9">
+    17:               <span class="black-text">
+  
+app/assets/javascripts/application.js:18
+app/views/pages/about.html.erb:14:in `_app_views_pages_about_html_erb___3829535579967334669_70188123721800'
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:37:08 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (2055.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (14.9ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 2438ms (Views: 2411.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-08-14 12:37:15 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5RiCYFJhHMkOQZ+wPlDwIbj5q06Teqx2mnHjLA4gO32RtRo4gA9YC1cuT2flkYm+2dUL0AlsNJnpTRJ4KUDk6w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 11ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:37:17 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (12.4ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-14 12:37:38 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 99ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-08-14 12:37:40 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (0.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-14 12:37:41 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 95ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-14 12:38:52 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 791ms (Views: 742.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:38:55 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.7ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-14 12:39:07 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 123ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-08-14 12:39:36 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8BFdmOv4nP/S9FMnv6rePXYp/aGby88rEwzWhsqlFgPZ2dsXiWYrlJpFrfV1TXhOdAlNDTyu3lpBilCOTY1cuQ==", "user"=>{"email"=>"pavel.palancica@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "pavel.palancica@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-08-14 09:39:36.644608"], ["last_sign_in_at", "2018-08-14 09:30:13.383574"], ["sign_in_count", 5], ["updated_at", "2018-08-14 09:39:36.645746"], ["id", 4]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 176ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:39:42 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 76.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-14 12:46:05 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.6ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 86.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-08-14 12:46:12 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uq4cvDtTiDAjxs6qCU+3OgaH4Zqaha25PHYFKLCPdajRpCLpd478VslC1agnAc82WVUUzmTUmFc2TevdwTpytQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 200 OK in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-14 12:46:15 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.9ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-08-14 12:46:20 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered shared/_devisemes.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdminUsers (20180814124357)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_email" ON "admin_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admin_users_on_reset_password_token" ON "admin_users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180814124357"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActiveAdminComments (20180814124358)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "namespace" varchar, "body" text, "resource_type" varchar, "resource_id" integer, "author_type" varchar, "author_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180814124358"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin" for 127.0.0.1 at 2018-08-14 15:47:26 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-08-14 15:47:26 +0300
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/shared/_links.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (35.0ms)
+Completed 200 OK in 11166ms (Views: 11149.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-08-14 15:47:37 +0300
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/shared/_links.erb (2.2ms)
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (34.7ms)
+Completed 200 OK in 366ms (Views: 363.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-14 15:47:45 +0300
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-08-14 15:47:45 +0300
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (25.9ms)
+Completed 200 OK in 144ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-08-14 15:49:06 +0300
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PvXTgdFZKiEL1LXAxP4zhtVd1LrXjTrrb2Ywrs97IktZzfU+n+4u97pk5gvVVE6cf4o0tzCgveFVsIpl6dGMyQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PvXTgdFZKiEL1LXAxP4zhtVd1LrXjTrrb2Ywrs97IktZzfU+n+4u97pk5gvVVE6cf4o0tzCgveFVsIpl6dGMyQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/shared/_links.erb (1.3ms)
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (20.4ms)
+Completed 200 OK in 269ms (Views: 120.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-08-14 15:49:14 +0300
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8iZLyh0IZQCOUl8s59pCyVD9h54jSgYJnsT4UYwtE1SVHm11U79h1j/iDOf2cD/T+ipnk8RngQOkEkKaqoe91g==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8iZLyh0IZQCOUl8s59pCyVD9h54jSgYJnsT4UYwtE1SVHm11U79h1j/iDOf2cD/T+ipnk8RngQOkEkKaqoe91g==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (19.0ms)
+Completed 200 OK in 247ms (Views: 115.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$11$j1lTI7RLRCeNFty5h/4o.Oi1aePIwRY0khRQB0/0rshmohhb9AUIO"], ["created_at", "2018-08-14 12:55:24.832695"], ["updated_at", "2018-08-14 12:55:24.832695"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admin/login" for 127.0.0.1 at 2018-08-14 15:58:17 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OlPuD3NCfky4KVfFq+gSkDNT5stLMUx8XyLQZXcOBmdda8iwPfV6mgmZBA66Qm+KmYQGxqwcy3Zl9GquUaSo5Q==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2018-08-14 12:58:17.601134"], ["last_sign_in_at", "2018-08-14 12:58:17.601134"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-08-14 12:58:17.602373"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 226ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-14 15:58:17 +0300
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/page/index.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/page/index.html.arb (715.4ms)
+Completed 200 OK in 727ms (Views: 721.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2018-08-14 15:59:32 +0300
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (166.3ms)
+Completed 200 OK in 184ms (Views: 177.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2018-08-14 15:59:42 +0300
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (121.7ms)
+Completed 200 OK in 138ms (Views: 135.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/admin_users" for 127.0.0.1 at 2018-08-14 16:00:27 +0300
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LkiEnLH/umYAKgg85eE7yjp99ngza11aNwaQazevANEZVdO4QbpDzY6wlLXjm+9A2qTKWSnBJzMX75krnLLIOA==", "admin_user"=>{"email"=>"pavel@idev.tv", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Admin user"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "pavel@idev.tv"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "pavel@idev.tv"], ["encrypted_password", "$2a$11$vVXWLLqrGDXnOl4YAL8iDOYZ5BChkzjgkaqh3xMkMf1NuQHePcbw."], ["created_at", "2018-08-14 13:00:27.890905"], ["updated_at", "2018-08-14 13:00:27.890905"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/admin_users/2
+Completed 302 Found in 175ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/admin_users/2" for 127.0.0.1 at 2018-08-14 16:00:27 +0300
+Processing by Admin::AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "AdminUser"], ["resource_id", 2], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "AdminUser"], ["resource_id", 2], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb (141.0ms)
+Completed 200 OK in 158ms (Views: 150.5ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/admin/admin_users/2" for 127.0.0.1 at 2018-08-14 16:00:57 +0300
+Processing by Admin::AdminUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"79G7fuqcbuUCDx72fxnthwbuPBtjFRXbFNiQ4r1V0J3YzOxaGtmXToyVgn95YzkN5jcAOnm/b7I0MZmiFkgYdA==", "id"=>"2"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/admin_users
+Completed 302 Found in 43ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2018-08-14 16:00:57 +0300
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (139.4ms)
+Completed 200 OK in 152ms (Views: 148.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/admin_users/new" for 127.0.0.1 at 2018-08-14 16:01:00 +0300
+Processing by Admin::AdminUsersController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (114.4ms)
+Completed 200 OK in 129ms (Views: 126.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/admin_users" for 127.0.0.1 at 2018-08-14 16:01:10 +0300
+Processing by Admin::AdminUsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXCm1GKT7bLf7Zhp+9wUfeRJmhJXsuLOBBHNyp2dMJ3ybfHwktYUGVF3BOD9psD3BJCmM00YmKck+MSKNoD4dA==", "admin_user"=>{"email"=>"admin@idev.tv", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create Admin user"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdminUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = ? LIMIT ?[0m  [["email", "admin@idev.tv"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@idev.tv"], ["encrypted_password", "$2a$11$mLdZEVru4pS3Yd8aitoe/uc78UtnPQHyfZP2AIy/HS/mhwHhHnllC"], ["created_at", "2018-08-14 13:01:10.458359"], ["updated_at", "2018-08-14 13:01:10.458359"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/admin_users/3
+Completed 302 Found in 172ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/admin_users/3" for 127.0.0.1 at 2018-08-14 16:01:10 +0300
+Processing by Admin::AdminUsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "AdminUser"], ["resource_id", 3], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "AdminUser"], ["resource_id", 3], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb (124.6ms)
+Completed 200 OK in 137ms (Views: 134.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-08-14 16:01:24 +0300
+Processing by ActiveAdmin::Devise::SessionsController#destroy as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-14 16:01:24 +0300
+Processing by Admin::DashboardController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-08-14 16:01:24 +0300
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (20.2ms)
+Completed 200 OK in 128ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-08-14 16:01:34 +0300
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QfpeZB5Acw+vv5D5F+hoARzjySkvoPR0agYJC13EEeyFYGWRrq34EetTnj+DNqSvBZoJewjTuAHZZPmaV8aGvg==", "admin_user"=>{"email"=>"admin@idev.tv", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "admin@idev.tv"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "admin_users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admin_users"."id" = ?[0m  [["current_sign_in_at", "2018-08-14 13:01:34.272268"], ["last_sign_in_at", "2018-08-14 13:01:34.272268"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-08-14 13:01:34.272871"], ["id", 3]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 169ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2018-08-14 16:01:34 +0300
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/page/index.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/page/index.html.arb (91.5ms)
+Completed 200 OK in 98ms (Views: 96.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2018-08-14 16:02:48 +0300
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (119.1ms)
+Completed 200 OK in 133ms (Views: 129.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/admin/admin_users/1" for 127.0.0.1 at 2018-08-14 16:03:18 +0300
+Processing by Admin::AdminUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"y5NdirhDLlx7wwXDDXKIgNmB98pvIRaqG6iuy06BqWtSAhKFNSm8GoXa4yKelPEBt4jrgHrfqQ8fUHJLql4wDw==", "id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAdminUser Load (0.1ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "admin_users" WHERE "admin_users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/admin_users
+Completed 302 Found in 41ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/admin_users" for 127.0.0.1 at 2018-08-14 16:03:18 +0300
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (138.0ms)
+Completed 200 OK in 151ms (Views: 147.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/admin_users?order=sign_in_count_desc" for 127.0.0.1 at 2018-08-14 16:03:30 +0300
+Processing by Admin::AdminUsersController#index as HTML
+  Parameters: {"order"=>"sign_in_count_desc"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."sign_in_count" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (123.4ms)
+Completed 200 OK in 137ms (Views: 133.4ms | ActiveRecord: 0.7ms)
+
+
