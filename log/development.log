@@ -1,0 +1,1878 @@
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:09:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pages/about"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-13 17:10:05 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 146ms (Views: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-13 17:13:16 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 175ms (Views: 8.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:13:20 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 169ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___481761661345629266_70294937967600'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:13:45 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 14ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___481761661345629266_70294935055320'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:14:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 14ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___481761661345629266_70295004139800'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:14:48 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 335ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___702146226470177714_70344699635760'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:15:36 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 331ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3966003422627954202_70094093646480'
+Started GET "/" for 127.0.0.1 at 2018-08-13 17:15:40 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 9ms (Views: 6.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:15:45 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 13ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3966003422627954202_70094113604880'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:15:45 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 60ms
+
+
+  
+ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.):
+    4:     <title>CodeTube</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3966003422627954202_70094112492900'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:16:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3726ms (Views: 3724.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:17:50 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 72.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:22:34 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 75.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:22:36 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 72ms (Views: 69.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:22:56 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 73.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:22:57 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 77ms (Views: 75.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:23:07 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 70ms (Views: 67.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:23:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 64.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:23:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 64ms (Views: 61.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:23:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 65ms (Views: 62.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:01 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 52.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 51ms (Views: 49.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 50.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 67ms (Views: 64.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 74.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 71.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:13 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 60.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:24:14 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 57.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:16 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 57.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:17 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 60.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:17 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 66ms (Views: 63.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 54.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 51.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 54.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 74ms (Views: 71.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:25:52 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 62.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 64.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:09 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 56.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 60.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 60.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 59.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 67ms (Views: 64.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 61.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 54.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:54 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 58.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:55 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 67ms (Views: 64.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 60.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:26:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 60.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 65ms (Views: 61.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:15 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 56.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:18 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 58.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:19 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 62.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:19 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 54.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:19 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 65.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:27:19 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 66ms (Views: 62.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:29:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 64ms (Views: 62.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 60.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:26 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 60.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:26 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 65.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:26 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 61.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:45 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 57.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:51 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:32:51 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 60.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:34:35 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:34:41 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:34:41 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:34:46 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 59.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:34:47 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 59.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:34:47 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 60.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:37:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 56.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:38:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 58.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:39:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 58.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:39:33 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:39:42 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 60.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:41:45 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 63.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:43:45 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 76ms (Views: 74.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:43:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 58.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:44:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 57.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:44:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 69ms (Views: 66.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:44:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 73.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:44:48 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 58.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:45:28 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 59.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:46:32 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:47:11 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 67ms (Views: 65.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:47:17 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 90ms (Views: 88.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:47:52 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 62ms (Views: 60.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:48:11 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 56.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:48:32 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:48:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:57:09 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 17:58:18 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 58.5ms)
+
+
+Started GET "/pages/mobile.html" for 127.0.0.1 at 2018-08-13 17:58:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pages/mobile.html"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/pages/collapsible.html" for 127.0.0.1 at 2018-08-13 17:58:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/pages/collapsible.html"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:00:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 58.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:00:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:01:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2484ms (Views: 2482.2ms)
+
+
+Completed 200 OK in 1647ms (Views: 1644.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:01:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 83ms (Views: 80.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:01:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 77.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:02:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 176ms (Views: 173.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:02:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 57.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:02:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 85ms (Views: 76.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:04:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 63.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:28 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:28 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 58.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 67.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 70.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 76ms (Views: 73.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 77ms (Views: 74.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:05:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 52.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:21:27 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:22:36 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 69ms (Views: 66.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:23:53 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 70ms (Views: 67.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:24:54 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 62.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:26:11 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 63.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:26:34 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 58.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:26:34 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 76.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:26:34 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 100ms (Views: 98.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:27:05 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 60.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:27:19 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:24 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:25 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:25 +0300
+Processing by PagesController#about as HTML
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:25 +0300
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:25 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6133ms (Views: 6130.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:30 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 520ms (Views: 517.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:31 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 673ms (Views: 611.4ms)
+
+
+Completed 200 OK in 6943ms (Views: 6941.1ms)
+
+
+Completed 200 OK in 6415ms (Views: 6321.1ms)
+
+
+Completed 200 OK in 6178ms (Views: 6175.7ms)
+
+
+Completed 200 OK in 6205ms (Views: 6202.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 710ms (Views: 549.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:43 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 86.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:44 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 54.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:28:44 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 57ms (Views: 55.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:29:08 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1332ms (Views: 1329.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:29:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 75ms (Views: 72.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:30:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 66.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:30:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 69.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:30:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 81.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:09 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 117ms (Views: 114.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 58.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 56.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:20 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 50.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 80.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 81ms (Views: 79.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 81ms (Views: 78.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 70ms (Views: 68.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:53 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 64.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:54 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 56.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:33:55 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:34:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 67ms (Views: 65.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:34:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 62.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:34:17 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 60.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:34:24 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 58.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:35:30 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:35:31 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2506ms (Views: 2504.0ms)
+
+
+Completed 200 OK in 1803ms (Views: 1801.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:35:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 72ms (Views: 70.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 82ms (Views: 79.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 67ms (Views: 63.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 85ms (Views: 83.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:20 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 60.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 57.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 56.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 70.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 67ms (Views: 65.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 51.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 86ms (Views: 83.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:22 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 66.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 68.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:46 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 609ms (Views: 450.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 18:36:49 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 91.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:22:35 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 73ms (Views: 70.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:22:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 66.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-13 22:22:41 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 9ms (Views: 5.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:22:44 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 62.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:24:37 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 73.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:25:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 63.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:25:20 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 60.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:27:01 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 68.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:27:48 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1328ms (Views: 1325.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:27:50 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 85ms (Views: 83.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:27:54 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 75ms (Views: 72.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:27:55 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 69.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:28:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1469ms (Views: 1467.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:28:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 78ms (Views: 76.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:28:17 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1369ms (Views: 1367.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:28:26 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1422ms (Views: 1420.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:28:36 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1392ms (Views: 1390.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:29:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 81ms (Views: 79.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:30:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 69.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:30:52 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 69.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:30:57 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 64.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:30:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 66ms (Views: 63.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:30:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 71ms (Views: 68.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:30:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 75ms (Views: 72.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:31:21 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 67ms (Views: 64.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:31:34 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 62.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:31:41 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:31:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 51.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 52.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:10 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 52.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:14 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:15 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 61.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:15 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 68.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:15 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 69.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:32:51 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 59.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:33:08 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 59.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:33:25 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:33:27 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 57.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:33:38 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 60.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:33:58 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1384ms (Views: 1381.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 50.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:01 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 52ms (Views: 50.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:01 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 52.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 53ms (Views: 51.6ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 85ms (Views: 82.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:07 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:07 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:34:08 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 57.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:36:31 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 174ms (Views: 171.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:36:34 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:36:43 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 58.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:36:59 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 63.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:40:35 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:40:39 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 80.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:40:50 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 80ms (Views: 78.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:40:56 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 71ms (Views: 68.3ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:03 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 59.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 65.7ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:18 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 57.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:23 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 59ms (Views: 56.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 60ms (Views: 58.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:43 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 59ms (Views: 56.9ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:41:46 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 58ms (Views: 56.5ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:45:04 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 63ms (Views: 60.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:45:04 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 73ms (Views: 70.8ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:45:05 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 72.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:49:09 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 62ms (Views: 60.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:51:00 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 63.0ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 22:56:43 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 63ms (Views: 61.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 23:00:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 59.1ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 23:00:53 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 64ms (Views: 62.2ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-13 23:00:55 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 66.4ms)
+
+
+Started GET "/pages/about" for 127.0.0.1 at 2018-08-14 07:52:46 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (269.0ms)
+Completed 200 OK in 480ms (Views: 471.3ms)
+
+
