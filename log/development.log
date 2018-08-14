@@ -4267,3 +4267,482 @@ Processing by Admin::AdminUsersController#edit as HTML
 Completed 200 OK in 1764ms (Views: 1760.6ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProjects (20180814150420)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "content" text, "price" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180814150420"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTasks (20180814150438)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "note" text, "video" varchar, "header" boolean DEFAULT 'f' NOT NULL, "tag" varchar, "project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_02e851e3b7"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tasks_on_project_id" ON "tasks" ("project_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180814150438"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admin_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tasks_on_project_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin/" for 127.0.0.1 at 2018-08-14 18:11:54 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/page/index.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/page/index.html.arb (764.2ms)
+Completed 200 OK in 815ms (Views: 773.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-08-14 18:12:19 +0300
+Processing by Admin::UsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (239.9ms)
+Completed 200 OK in 261ms (Views: 251.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/tasks" for 127.0.0.1 at 2018-08-14 18:12:49 +0300
+Processing by Admin::TasksController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tasks" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (134.9ms)
+Completed 200 OK in 152ms (Views: 145.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2018-08-14 18:13:12 +0300
+Processing by Admin::UsersController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (173.4ms)
+Completed 200 OK in 187ms (Views: 183.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/projects" for 127.0.0.1 at 2018-08-14 18:13:56 +0300
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (131.1ms)
+Completed 200 OK in 146ms (Views: 142.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/projects/new" for 127.0.0.1 at 2018-08-14 18:13:59 +0300
+Processing by Admin::ProjectsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (134.3ms)
+Completed 200 OK in 153ms (Views: 145.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/projects" for 127.0.0.1 at 2018-08-14 18:14:50 +0300
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLu228G+nB/+NCm0kZh8m2W5Ysg7k2B4UvmNP/KbxWAVvhUWCCbm0nmv6N0X508HV+G7SRHE9QAQWUg2sa++pA==", "project"=>{"name"=>"Project 1", "content"=>"This is content 1", "price"=>"15"}, "commit"=>"Create Project"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+activemodel (5.1.6) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'
+activemodel (5.1.6) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'
+/Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/lib/active_admin/resource_controller/data_access.rb:289:in `assign_attributes'
+/Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/lib/active_admin/resource_controller/data_access.rb:118:in `build_resource'
+inherited_resources (1.9.0) lib/inherited_resources/actions.rb:31:in `create'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/admin/projects" for 127.0.0.1 at 2018-08-14 18:22:35 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLu228G+nB/+NCm0kZh8m2W5Ysg7k2B4UvmNP/KbxWAVvhUWCCbm0nmv6N0X508HV+G7SRHE9QAQWUg2sa++pA==", "project"=>{"name"=>"Project 1", "content"=>"This is content 1", "price"=>"15"}, "commit"=>"Create Project"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "projects" ("name", "content", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Project 1"], ["content", "This is content 1"], ["price", 15], ["created_at", "2018-08-14 15:22:36.018848"], ["updated_at", "2018-08-14 15:22:36.018848"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/projects/1
+Completed 302 Found in 97ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/projects/1" for 127.0.0.1 at 2018-08-14 18:22:36 +0300
+Processing by Admin::ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Project"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Project"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb (718.3ms)
+Completed 200 OK in 735ms (Views: 729.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/tasks" for 127.0.0.1 at 2018-08-14 18:23:28 +0300
+Processing by Admin::TasksController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tasks" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (130.6ms)
+Completed 200 OK in 147ms (Views: 141.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/tasks/new" for 127.0.0.1 at 2018-08-14 18:23:39 +0300
+Processing by Admin::TasksController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (141.9ms)
+Completed 200 OK in 162ms (Views: 152.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/admin/tasks" for 127.0.0.1 at 2018-08-14 18:24:56 +0300
+Processing by Admin::TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FA2a3PPVCdcCcUnNhFrpJLgDERWTcEAksKBItBO9xQgxCDkROk1zGoXqiKQCJdq4ilvIlLkn1VzyAI29UIm+zA==", "task"=>{"project_id"=>"1", "title"=>"Task 1", "note"=>"Note 1", "video"=>"Video 1", "header"=>"0", "tag"=>"T1"}, "commit"=>"Create Task"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "note", "video", "tag", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["note", "Note 1"], ["video", "Video 1"], ["tag", "T1"], ["project_id", 1], ["created_at", "2018-08-14 15:24:56.180243"], ["updated_at", "2018-08-14 15:24:56.180243"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/tasks/1
+Completed 302 Found in 54ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/tasks/1" for 127.0.0.1 at 2018-08-14 18:24:56 +0300
+Processing by Admin::TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Task"], ["resource_id", 1], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Task"], ["resource_id", 1], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb (148.2ms)
+Completed 200 OK in 162ms (Views: 158.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/admin/tasks/1" for 127.0.0.1 at 2018-08-14 18:30:13 +0300
+Processing by Admin::TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w4BQx+QdXV2FRBYKQuG/Ow9fWH94jdTd4hoLGuhXOQHmhfMKLYUnkALf12PEnoynPQeB/lLaQaWgus4Tq2NCxQ==", "id"=>"1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/tasks
+Completed 302 Found in 65ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/tasks" for 127.0.0.1 at 2018-08-14 18:30:13 +0300
+Processing by Admin::TasksController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "tasks" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (139.2ms)
+Completed 200 OK in 153ms (Views: 149.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/tasks/new" for 127.0.0.1 at 2018-08-14 18:30:21 +0300
+Processing by Admin::TasksController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (133.6ms)
+Completed 200 OK in 147ms (Views: 144.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/tasks" for 127.0.0.1 at 2018-08-14 18:30:55 +0300
+Processing by Admin::TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0jXDbSNCgXliAhi2BPSK1vrnDCYc3OZMecr1GGGKEnP3MGCg6tr7tOWZ2d+Ci7lKyL/VpzaLczQ7ajARIr5ptw==", "task"=>{"project_id"=>"", "title"=>"", "note"=>"", "video"=>"", "header"=>"0", "tag"=>""}, "commit"=>"Create Task"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (149.7ms)
+Completed 200 OK in 199ms (Views: 159.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/admin/tasks" for 127.0.0.1 at 2018-08-14 18:32:36 +0300
+Processing by Admin::TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KOyAVEoSlVvUzrYkM7Mi/7pu9l/839QJoEc2iCNp8uwN6SOZg4rvllNVd021zBFjiDYv3taIQXHi5/OBYF2JKA==", "task"=>{"project_id"=>"1", "title"=>"Task 2", "note"=>"Note for Task 2", "video"=>"abc", "header"=>"0", "tag"=>"T2"}, "commit"=>"Create Task"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "note", "video", "tag", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["note", "Note for Task 2"], ["video", "abc"], ["tag", "T2"], ["project_id", 1], ["created_at", "2018-08-14 15:32:36.037300"], ["updated_at", "2018-08-14 15:32:36.037300"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/tasks/2
+Completed 302 Found in 42ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/tasks/2" for 127.0.0.1 at 2018-08-14 18:32:36 +0300
+Processing by Admin::TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Task"], ["resource_id", 2], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Task"], ["resource_id", 2], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb (132.4ms)
+Completed 200 OK in 146ms (Views: 142.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/projects" for 127.0.0.1 at 2018-08-14 18:32:55 +0300
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (147.8ms)
+Completed 200 OK in 162ms (Views: 158.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/projects/new" for 127.0.0.1 at 2018-08-14 18:32:57 +0300
+Processing by Admin::ProjectsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (136.4ms)
+Completed 200 OK in 150ms (Views: 147.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/projects" for 127.0.0.1 at 2018-08-14 18:33:16 +0300
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iZYC+hfRk3s2sl1G8DqQZqEJYa3TLzEAB/d565AiCgWsk6E33knptrEpnC92RaP6k1G4LPl4pHhFV7zi0xZxwQ==", "project"=>{"name"=>"", "content"=>"", "price"=>""}, "commit"=>"Create Project"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (124.3ms)
+Completed 200 OK in 174ms (Views: 134.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/projects" for 127.0.0.1 at 2018-08-14 18:33:26 +0300
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (144.1ms)
+Completed 200 OK in 158ms (Views: 154.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/projects" for 127.0.0.1 at 2018-08-14 18:33:28 +0300
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (133.1ms)
+Completed 200 OK in 147ms (Views: 143.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/projects/new" for 127.0.0.1 at 2018-08-14 18:33:32 +0300
+Processing by Admin::ProjectsController#new as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (132.4ms)
+Completed 200 OK in 145ms (Views: 142.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin/projects" for 127.0.0.1 at 2018-08-14 18:33:51 +0300
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CKGqgfHymD2fosDaC9+IHR14dfJmfq51F90Ar3B6dmstpAlMOGri8Bg5AbONoLuBLyCsc0wpOw1VfcWmM04Nrw==", "project"=>{"name"=>"", "content"=>"", "price"=>""}, "commit"=>"Create Project"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/new.html.arb (122.1ms)
+Completed 200 OK in 172ms (Views: 132.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/projects" for 127.0.0.1 at 2018-08-14 18:35:29 +0300
+Processing by Admin::ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zBFWNX8QW20sdxYVUK6R54sfxw1MlpabveKz3/jOa77pFPX4toghoKvs13zW0aJ7uUcejGbBA+P/QnbWu/oQeg==", "project"=>{"name"=>"Project 2", "content"=>"This is content 2", "price"=>"46"}, "commit"=>"Create Project"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "content", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Project 2"], ["content", "This is content 2"], ["price", 46], ["created_at", "2018-08-14 15:35:29.540054"], ["updated_at", "2018-08-14 15:35:29.540054"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/projects/2
+Completed 302 Found in 40ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/projects/2" for 127.0.0.1 at 2018-08-14 18:35:29 +0300
+Processing by Admin::ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Project"], ["resource_id", 2], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Project"], ["resource_id", 2], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/show.html.arb (131.9ms)
+Completed 200 OK in 145ms (Views: 141.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/projects" for 127.0.0.1 at 2018-08-14 18:36:05 +0300
+Processing by Admin::ProjectsController#index as HTML
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "projects" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY "projects"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-c301ab126b3f/app/views/active_admin/resource/index.html.arb (149.2ms)
+Completed 200 OK in 163ms (Views: 159.0ms | ActiveRecord: 1.0ms)
+
+
