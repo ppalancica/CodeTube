@@ -40,6 +40,8 @@ gem 'toastr-rails'
 
 gem 'activeadmin', github: 'activeadmin'
 
+gem 'active_skin'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
