@@ -47,6 +47,8 @@ gem 'paperclip', '~> 6.1'
 gem 'redcarpet', '~> 3.2', '>= 3.2.3'
 gem 'coderay', '~> 1.1'
 
+gem 'friendly_id', '~> 5.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
