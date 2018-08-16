@@ -49,6 +49,12 @@ gem 'coderay', '~> 1.1'
 
 gem 'friendly_id', '~> 5.1'
 
+# gem 'active_admin-sortable_tree', '~> 0.2.1'
+gem 'active_admin-sortable_tree'
+
+gem 'jquery-ui-rails'
+gem 'bourbon', '~> 4.2', '>= 4.2.6'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
