@@ -13450,3 +13450,759 @@ Processing by TaskController#show as HTML
 Completed 200 OK in 292ms (Views: 286.2ms | ActiveRecord: 0.9ms)
 
 
+DEPRECATION WARNING: Active Admin: The `register_stylesheet` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.css" stylesheet in the active_admin.scss.
+ (called from register_stylesheet at /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:5)
+DEPRECATION WARNING: Active Admin: The `register_javascript` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.js" javascript in the active_admin.js.
+ (called from register_javascript at /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:21)
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 22:42:49 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (29.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (19.6ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 1049ms (Views: 976.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/project/project-1/task/task-2" for 127.0.0.1 at 2018-08-18 22:42:56 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '0' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '0' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.9ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 480ms (Views: 454.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:43:11 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.7ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 394ms (Views: 369.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project/project-1/task/task-2" for 127.0.0.1 at 2018-08-18 22:43:14 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '0' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '0' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.7ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 404ms (Views: 380.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:43:16 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 394ms (Views: 370.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/project/project-1/task/task-2" for 127.0.0.1 at 2018-08-18 22:43:18 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '0' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '0' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 382ms (Views: 359.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:43:20 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 387ms (Views: 363.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/project/project-1/task/task-1-2" for 127.0.0.1 at 2018-08-18 22:43:44 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '4' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '4' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.6ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 389ms (Views: 363.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 22:44:21 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 330ms (Views: 322.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/tasks/task-1-1" for 127.0.0.1 at 2018-08-18 22:44:22 +0300
+Processing by Admin::TasksController#show as HTML
+  Parameters: {"id"=>"task-1-1"}
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."slug" = ? LIMIT ?[0m  [["slug", "task-1-1"], ["LIMIT", 1]]
+  Rendering /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/app/views/active_admin/resource/show.html.arb
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Task"], ["resource_id", 5], ["namespace", "admin"]]
+  [1m[36mActiveAdmin::Comment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ? LIMIT ? OFFSET ?[0m  [["resource_type", "Task"], ["resource_id", 5], ["namespace", "admin"], ["LIMIT", 1], ["OFFSET", 0]]
+  Rendered /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/app/views/active_admin/resource/show.html.arb (264.1ms)
+Completed 200 OK in 301ms (Views: 280.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/project/project-1/task/task-2" for 127.0.0.1 at 2018-08-18 22:44:25 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '0' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '0' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (3.2ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 416ms (Views: 392.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:44:28 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 394ms (Views: 370.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 22:45:35 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 348ms (Views: 341.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/" for 127.0.0.1 at 2018-08-18 22:45:44 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 442ms (Views: 438.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 22:45:46 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 414ms (Views: 388.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:45:51 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 396ms (Views: 372.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:46:04 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 410ms (Views: 386.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:46:07 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (3.3ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 387ms (Views: 363.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1-2" for 127.0.0.1 at 2018-08-18 22:46:10 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '4' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '4' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 386ms (Views: 362.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 22:47:51 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 314ms (Views: 307.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 22:48:01 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (3.1ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 340ms (Views: 331.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project/" for 127.0.0.1 at 2018-08-18 22:48:15 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 330ms (Views: 325.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 22:48:20 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 410ms (Views: 387.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/project/" for 127.0.0.1 at 2018-08-18 22:57:47 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 488ms (Views: 485.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 22:57:50 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (3.2ms)
+  Rendered shared/_message.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 390ms (Views: 365.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/project/project-1/task/task-2" for 127.0.0.1 at 2018-08-18 22:57:54 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '0' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '0' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 367ms (Views: 344.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/project" for 127.0.0.1 at 2018-08-18 22:58:09 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (2.3ms)
+  Rendered shared/_header.html.erb (11.0ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 297ms (Views: 294.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 22:58:12 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (4.9ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 378ms (Views: 355.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 22:58:17 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.3ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 359ms (Views: 335.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 23:05:50 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 306ms (Views: 298.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 23:06:24 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 370ms (Views: 347.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:06:27 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 388ms (Views: 364.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:06:32 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 383ms (Views: 361.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/project/project-1/task/task-2" for 127.0.0.1 at 2018-08-18 23:06:35 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '0' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '0' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 380ms (Views: 354.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:06:37 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 481ms (Views: 458.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 23:06:39 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 391ms (Views: 366.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:06:41 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 366ms (Views: 343.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/project/project-1/task/task-1-2" for 127.0.0.1 at 2018-08-18 23:06:43 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-2"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '4' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '4' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 363ms (Views: 339.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 23:06:45 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 357ms (Views: 335.3ms | ActiveRecord: 0.4ms)
+
+
+DEPRECATION WARNING: Active Admin: The `register_stylesheet` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.css" stylesheet in the active_admin.scss.
+ (called from register_stylesheet at /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:5)
+DEPRECATION WARNING: Active Admin: The `register_javascript` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.js" javascript in the active_admin.js.
+ (called from register_javascript at /Library/Ruby/Gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:21)
+Started GET "/" for 127.0.0.1 at 2018-08-18 23:09:54 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (28.2ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 955ms (Views: 929.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/project/project-2" for 127.0.0.1 at 2018-08-18 23:09:59 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-2"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 2]]
+  Rendered project/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (3.3ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 492ms (Views: 453.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:10:08 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (25.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 408ms (Views: 383.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:10:12 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 291ms (Views: 287.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 23:10:18 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 368ms (Views: 343.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/project/project-2" for 127.0.0.1 at 2018-08-18 23:10:19 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-2"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-2"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 2]]
+  Rendered project/show.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_message.html.erb (0.9ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 393ms (Views: 368.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-18 23:10:22 +0300
+Processing by ProjectController#index as HTML
+  Rendering project/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered project/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 372ms (Views: 351.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/project/project-1/task/task-1" for 127.0.0.1 at 2018-08-18 23:10:29 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '2' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '2' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 370ms (Views: 344.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-18 23:10:33 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 293ms (Views: 288.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/project/project-1/task/task-1-1" for 127.0.0.1 at 2018-08-18 23:10:35 +0300
+Processing by TaskController#show as HTML
+  Parameters: {"project_id"=>"project-1", "id"=>"task-1-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND "tasks"."slug" = ? ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["slug", "task-1-1"], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag > '3' AND header = 'f') ORDER BY "tasks"."tag" ASC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? AND (tag < '3' AND header = 'f') ORDER BY "tasks"."tag" DESC LIMIT ?[0m  [["project_id", 1], ["LIMIT", 1]]
+  Rendering task/show.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered task/show.html.erb within layouts/application (25.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 383ms (Views: 360.0ms | ActiveRecord: 1.1ms)
+
+
