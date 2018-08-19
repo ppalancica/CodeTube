@@ -15,6 +15,17 @@ main {
   width: 95%;
 }
 
+.avatar-small {
+  width: 50px;
+}
+
+.avatar-medium {
+  width: 80px;
+}
+
+.mask {
+  z-index: 99;
+}
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
