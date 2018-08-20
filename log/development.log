@@ -17582,3 +17582,428 @@ Processing by ProjectController#show as HTML
 Completed 200 OK in 292ms (Views: 283.1ms | ActiveRecord: 1.7ms)
 
 
+DEPRECATION WARNING: Active Admin: The `register_stylesheet` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.css" stylesheet in the active_admin.scss.
+ (called from register_stylesheet at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:5)
+DEPRECATION WARNING: Active Admin: The `register_javascript` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.js" javascript in the active_admin.js.
+ (called from register_javascript at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:21)
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:43:18 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (5.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (30.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 2084ms (Views: 1986.2ms | ActiveRecord: 4.8ms)
+
+
+Started DELETE "/project/project-1/reviews/1" for 127.0.0.1 at 2018-08-20 17:44:07 +0300
+Processing by ReviewsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HP0i7BQEVzgf4LdHJoAyKoQskyQBYcM0Hk4EgTIwudF7AttzWXBiIusYN6MiHb3x9lpbH28o5D+3uspWI0yzSg==", "project_id"=>"project-1", "id"=>"1"}
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/project/project-1
+Completed 200 OK in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:44:11 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered reviews/_form.html.erb (3.9ms)
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  Rendered reviews/_index.html.erb (1.1ms)
+  Rendered project/show.html.erb within layouts/application (13.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 333.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/project/project-1/reviews" for 127.0.0.1 at 2018-08-20 17:44:17 +0300
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FN6dSleNDJnAiI/9YswDPNuNHgnqUKv7rYk/g2E2KPNzIWTVGvk5gzRwDxlmUYznqfvWMoQZjPAEffFUcEoiaA==", "review"=>{"star"=>"5", "comment"=>"Very nice!", "project_id"=>"1", "user_id"=>"4"}, "commit"=>"Create Review", "project_id"=>"project-1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("project_id", "user_id", "comment", "created_at", "star", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["project_id", 1], ["user_id", 4], ["comment", "Very nice!"], ["created_at", "2018-08-20 14:44:17.461539"], ["star", 5], ["updated_at", "2018-08-20 14:44:17.461539"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/project/project-1
+Completed 200 OK in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:44:21 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.6ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (10.0ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (0.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 330ms (Views: 320.7ms | ActiveRecord: 1.7ms)
+
+
+DEPRECATION WARNING: Active Admin: The `register_stylesheet` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.css" stylesheet in the active_admin.scss.
+ (called from register_stylesheet at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:5)
+DEPRECATION WARNING: Active Admin: The `register_javascript` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.js" javascript in the active_admin.js.
+ (called from register_javascript at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:21)
+DEPRECATION WARNING: Active Admin: The `register_stylesheet` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.css" stylesheet in the active_admin.scss.
+ (called from register_stylesheet at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:5)
+DEPRECATION WARNING: Active Admin: The `register_javascript` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.js" javascript in the active_admin.js.
+ (called from register_javascript at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:21)
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:52:41 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (5.4ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (30.9ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_message.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 1780ms (Views: 1681.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:56:20 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (3.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (14.8ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 343ms (Views: 330.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:56:41 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.8ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (11.1ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_message.html.erb (0.8ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 320ms (Views: 312.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:56:45 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.5ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (10.1ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 315ms (Views: 306.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:58:58 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.7ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (10.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 333ms (Views: 324.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:59:09 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.5ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (10.3ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 326ms (Views: 318.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:59:25 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.7ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (10.2ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 322ms (Views: 313.1ms | ActiveRecord: 1.8ms)
+
+
+DEPRECATION WARNING: Active Admin: The `register_stylesheet` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.css" stylesheet in the active_admin.scss.
+ (called from register_stylesheet at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:5)
+DEPRECATION WARNING: Active Admin: The `register_javascript` config is deprecated and will be removed
+in v2. Import your "active_admin/sortable.js" javascript in the active_admin.js.
+ (called from register_javascript at /Users/idevwizard/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/bundler/gems/activeadmin-ef90f33416ea/lib/active_admin/asset_registration.rb:21)
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:59:38 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (4.8ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (29.3ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 1129ms (Views: 1037.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 17:59:42 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (15.7ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (23.7ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_message.html.erb (0.7ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 379ms (Views: 369.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 18:01:30 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (4.5ms)
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (13.6ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_message.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 343ms (Views: 330.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 18:01:47 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  Rendered reviews/_index.html.erb (0.9ms)
+  Rendered project/show.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/Users/idevwizard/Desktop/b/CodeTube/app/views/reviews/_index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rds(r.created_at, Time.now) ago );@output_buffer.safe_append...
+...                               ^):
+  
+app/views/reviews/_index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/project/show.html.erb:75:in `_app_views_project_show_html_erb__511835516418358573_70241698536220'
+Started GET "/project/project-1" for 127.0.0.1 at 2018-08-20 18:02:30 +0300
+Processing by ProjectController#show as HTML
+  Parameters: {"id"=>"project-1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."slug" = ? LIMIT ?[0m  [["slug", "project-1"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mProject Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "projects" INNER JOIN "subscriptions" ON "projects"."id" = "subscriptions"."project_id" WHERE "subscriptions"."user_id" = ? AND "projects"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" INNER JOIN "subscriptions" ON "users"."id" = "subscriptions"."user_id" WHERE "subscriptions"."project_id" = ? ORDER BY created_at desc LIMIT ?[0m  [["project_id", 1], ["LIMIT", 10]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT  "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? AND "reviews"."user_id" = ? LIMIT ?[0m  [["project_id", 1], ["user_id", 4], ["LIMIT", 1]]
+  Rendering project/show.html.erb within layouts/application
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."project_id" = ? ORDER BY "tasks"."tag" ASC[0m  [["project_id", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."project_id" = ? ORDER BY id desc[0m  [["project_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reviews/_index.html.erb (2.8ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT AVG("reviews"."star") FROM "reviews" WHERE "reviews"."project_id" = ?[0m  [["project_id", 1]]
+  Rendered project/show.html.erb within layouts/application (10.4ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_message.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 309ms (Views: 300.2ms | ActiveRecord: 1.8ms)
+
+
