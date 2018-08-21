@@ -15,6 +15,7 @@
 //= require_tree .
 //= require jquery
 //= require jquery-ui
+//= require active_admin
 //= require materialize-sprockets
 //= require jquery_ujs
 //= require toastr
