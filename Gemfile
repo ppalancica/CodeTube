@@ -55,6 +55,8 @@ gem 'active_admin-sortable_tree'
 gem 'jquery-ui-rails'
 gem 'bourbon', '~> 4.2', '>= 4.2.6'
 
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
